@@ -1,0 +1,420 @@
+
+/* fonts */
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-Regular/Raleway-Regular.eot');
+  src: url('../fonts/Raleway-Regular/Raleway-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Raleway-Regular/Raleway-Regular.svg#Raleway-Regular') format('svg'),
+       url('../fonts/Raleway-Regular/Raleway-Regular.ttf') format('truetype'),
+       url('../fonts/Raleway-Regular/Raleway-Regular.woff') format('woff'),
+       url('../fonts/Raleway-Regular/Raleway-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-SemiBold/Raleway-SemiBold.eot');
+  src: url('../fonts/Raleway-SemiBold/Raleway-SemiBold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Raleway-SemiBold/Raleway-SemiBold.svg#Raleway-SemiBold') format('svg'),
+       url('../fonts/Raleway-SemiBold/Raleway-SemiBold.ttf') format('truetype'),
+       url('../fonts/Raleway-SemiBold/Raleway-SemiBold.woff') format('woff'),
+       url('../fonts/Raleway-SemiBold/Raleway-SemiBold.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-ExtraBold/Raleway-ExtraBold.eot');
+  src: url('../fonts/Raleway-ExtraBold/Raleway-ExtraBold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Raleway-ExtraBold/Raleway-ExtraBold.svg#Raleway-ExtraBold') format('svg'),
+       url('../fonts/Raleway-ExtraBold/Raleway-ExtraBold.ttf') format('truetype'),
+       url('../fonts/Raleway-ExtraBold/Raleway-ExtraBold.woff') format('woff'),
+       url('../fonts/Raleway-ExtraBold/Raleway-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-Black/Raleway-Black.eot');
+  src: url('../fonts/Raleway-Black/Raleway-Black.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Raleway-Black/Raleway-Black.svg#Raleway-Black') format('svg'),
+       url('../fonts/Raleway-Black/Raleway-Black.ttf') format('truetype'),
+       url('../fonts/Raleway-Black/Raleway-Black.woff') format('woff'),
+       url('../fonts/Raleway-Black/Raleway-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* parallax */
+
+.parallax{
+    width: 30%;
+    max-width: 600px;
+    height: 100vh;
+    max-height: 1000px;
+    overflow: hidden;
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.parallax::before{
+    display: block;
+    content: '';
+    
+    width: 100%;
+    height: 110vh;
+    background-color: #B2B2B2;
+    
+    opacity: .8;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.layer-1{
+    width: 200%;
+    height: 100vh;
+    background-image: url(../img/parallax/layer-1.png);
+    background-position: left -130px top -600px;
+    
+    position: absolute;
+    top: 0;
+    left: -300px;
+}
+
+.layer-2{
+    width: 200%;
+    height: 110vh;
+    background-image: url(../img/parallax/layer-2.png);
+    background-position: left -200px top -580px;
+    
+    z-index: -1;
+    
+    position: absolute;
+}
+
+
+/* writing animation */
+
+#writing{
+    display: block;
+    width: 23ch;
+    line-height: 50px;
+    
+    padding-right: 10px;
+    border-right: 8px solid #000;
+    white-space: nowrap;
+    overflow: hidden;
+    
+    -webkit-animation: writing-border 1s step-end infinite,
+        writing-text 5s steps(50, end);
+    
+    animation: writing-border 1s step-end infinite,
+        writing-text 5s steps(50, end);
+    
+    -webkit-transition: border .35s ease;
+    
+    transition: border .35s ease;
+}
+
+/* default css */
+
+*,
+*::before,
+*::after{
+    padding: 0px;
+    margin: 0px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+#ishome{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    
+    background-color: #fff;
+    color: #000;
+    
+    overflow-x: hidden;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.h1{
+    font-weight: 950;
+    font-size: 43px;
+    line-height: 80px;
+    
+    white-space: pre-wrap;
+    text-transform: uppercase;
+    text-align: start;
+    
+    width: 600px;
+    margin-bottom: 50px;
+}
+
+.p{
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    width: 500px;
+    margin-bottom: 50px;
+}
+
+a, btn{
+    color: inherit;
+    text-decoration: none;
+    border: none;
+    outline: none;   
+}
+
+.btn{
+    display: block;
+    height: 100%;
+    width: auto;
+    opacity: .5;
+    
+    -webkit-transition: opacity .2s linear;
+    transition: opacity .2s linear;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active{
+    opacity: 1;
+}
+
+li{
+    list-style-type: none;
+}
+
+
+/* customize css */
+
+/* header */
+.header{
+    margin-bottom: 50px;
+}
+
+.header-nav{
+    display: block;
+    width: 100vw;
+    min-height: 80px;
+    padding: 30px 0;
+}
+
+.header-nav-inner{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    
+    font-weight: 800;
+}
+
+.header-nav-inner li{
+    font-size: 15px;
+    margin-right: 80px;
+}
+
+#nav-main{
+    font-size: 23px;
+    opacity: 1;
+}
+
+#nav-main:hover,
+#nav-main:focus,
+#nav-main:active{
+    opacity: .5;
+}
+
+/* grid cards */
+
+.main{
+    margin-bottom: 100px;
+}
+
+.grid-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: repeat(2, 300px);
+    -webkit-column-gap: 35px;
+    column-gap: 25px;
+    grid-row-gap: 25px;
+}
+
+.grid-card{
+    display: block;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    
+    overflow: hidden;
+    position: relative;
+}
+
+.grid-card:hover .card-img,
+.grid-card:focus .card-img,
+.grid-card:active .card-img{
+    opacity: .5;
+}
+
+.card-hollow{
+    background-color: #fff;
+}
+
+.card-img{
+    width: 100%;
+    height: 100%;
+    
+    z-index: -1;
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+    -webkit-transition: opacity .2s linear;
+    
+    transition: opacity .2s linear;
+    
+}
+
+.footer{
+    width: 70%;
+    height: 200px;
+    background-color: #B5B5B5;
+    padding-top: 70px;
+}
+
+.copyright{
+    line-height: 30px;
+    text-align: center;
+}
+
+/* keyframes */
+
+@-webkit-keyframes writing-border{
+    10% {border-right: 8px solid #000;}
+    50% {border-right: none;}
+    10% {border-right: 8px solid #000;}
+}
+
+@keyframes writing-border{
+    10% {border-right: 8px solid #000;}
+    50% {border-right: none;}
+    10% {border-right: 8px solid #000;}   
+}
+
+@-webkit-keyframes writing-text{
+    from {width: 0;}
+}
+
+@keyframes writing-text{
+    from {width: 0;}
+}
+
+/* media */
+
+@media screen and (max-width: 900px){
+    /* default   */
+    .parallax{
+        display: none;
+    }
+    
+    .wrapper{
+        max-width: 300px;
+    }
+    
+    .p{
+        width: auto;
+        font-size: 20px;
+    }
+    
+    .h1{
+        width: auto;
+        font-size: 20px;
+    }
+    
+    /* custom   */
+    
+    .header-nav-inner li{
+        font-size: 15px;
+        margin-right: 20px;
+    }
+    
+    #nav-main{
+        font-size: 20px;
+    }
+    
+    .grid-wrapper{
+        grid-template-columns: repeat(2, 150px);
+        grid-template-rows: repeat(2, 150px);
+        -webkit-column-gap: 5px;
+        column-gap: 5px;
+        grid-row-gap: 10px;
+    }
+    
+    .grid-card{
+        width: 150px;
+        height: 150px;
+    }
+    
+    .footer{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1500px){
+    /* default   */
+    
+    .wrapper{
+        max-width: 1300px;
+    }
+    
+    .h1{
+        font-size: 50px;
+    }
+    
+    .p{
+        font-size: 30px;
+        width: 700px;
+    }
+    
+    /* custom    */
+    
+    .parallax{
+        max-width: 1100px;
+        max-height: 100vh;
+    }
+    
+    .grid-wrapper{
+        -webkit-column-gap: 75px;
+        column-gap: 75px;
+        grid-row-gap: 75px;
+    }
+    
+}
+
+@media screen and (min-width: 2000px){
+    .main{
+        margin-bottom: 300px;
+    }
+}
