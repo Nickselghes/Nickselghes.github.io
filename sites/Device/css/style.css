@@ -338,6 +338,11 @@ input[type="radio"]:checked + .radio-button::after {
 .header {
   position: relative;
 }
+.text-logo{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 48px;
+}
 .header-logo {
   position: absolute;
   left: 60px;
