@@ -342,6 +342,8 @@ input[type="radio"]:checked + .radio-button::after {
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   font-size: 48px;
+  
+  text-transform: uppercase;
 }
 .header-logo {
   position: absolute;
